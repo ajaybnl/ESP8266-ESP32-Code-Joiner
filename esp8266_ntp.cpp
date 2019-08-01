@@ -7,11 +7,13 @@ NTPSyncEvent_t ntpEvent;
 
 <#$#v#$#>
 //NTP
+#define NTP_SYNC_INTERVAL 600 // 10 Mins
+
 bool ntpdebug = false;
 int8_t timeZone = 5;
 int8_t minutesTimeZone = 30;
-bool wifiFirstConnected = false;
-bool syncEventTriggered = false; // True if a time even has been triggered
+bool dosync = false; // True if a time even has been triggered
+
 <#$#s#$#>
 
 
@@ -20,16 +22,17 @@ bool syncEventTriggered = false; // True if a time even has been triggered
 //NTP
   NTP.onNTPSyncEvent ([](NTPSyncEvent_t event) {
     ntpEvent = event;
-    syncEventTriggered = true;
+    dosync = true;
   });
 
   NTP.begin ("pool.ntp.org", timeZone, false, minutesTimeZone);
-  NTP.setInterval (3600); //SET TIME SYNC INTERVAL
+  NTP.setInterval (5); //Do not change
 <#$#l#$#>
 //NTP
-  if (syncEventTriggered) {
-    processSyncEvent (ntpEvent);
-    syncEventTriggered = false;
+  if (dosync) {
+    
+	if(ntp_sync_response (ntpEvent)) NTP.setInterval (NTP_SYNC_INTERVAL); // If we got time then change sync interval
+    dosync = false;
   }
 
 <#$#lb#$#>
@@ -37,7 +40,7 @@ bool syncEventTriggered = false; // True if a time even has been triggered
 
 <#$#f#$#>
 //NTP
-void processSyncEvent (NTPSyncEvent_t ntpEvent) {
+void ntp_sync_response (NTPSyncEvent_t ntpEvent) {
   if (ntpEvent) {
     if(ntpdebug) Serial.println("Time Sync error: ");
     if (ntpEvent == noResponse)
@@ -47,4 +50,6 @@ void processSyncEvent (NTPSyncEvent_t ntpEvent) {
   } else {
     if(ntpdebug) Serial.println("Got NTP time");
   }
+  //Return Success or Error
+  return((ntpEvent==0)?true:false);
 }

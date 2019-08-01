@@ -241,7 +241,7 @@ Close #1
 
 
 
-Text1.Text = Text2.Text
+If checktags(Text1.Text) = False Then Text1.Text = Text2.Text
 
 
 Tag = "<#$#i#$#>"
