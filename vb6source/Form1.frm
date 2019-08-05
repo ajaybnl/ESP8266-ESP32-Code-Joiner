@@ -1,14 +1,14 @@
 VERSION 5.00
 Begin VB.Form Form1 
    Caption         =   "Arduino & Esp8266 Code Joiner"
-   ClientHeight    =   10095
+   ClientHeight    =   13185
    ClientLeft      =   60
    ClientTop       =   405
-   ClientWidth     =   14220
+   ClientWidth     =   18360
    Icon            =   "Form1.frx":0000
    LinkTopic       =   "esp8266"
-   ScaleHeight     =   10095
-   ScaleWidth      =   14220
+   ScaleHeight     =   13185
+   ScaleWidth      =   18360
    StartUpPosition =   3  'Windows Default
    Begin VB.Timer Timer1 
       Interval        =   30000
@@ -330,7 +330,7 @@ File1.Path = App.Path
 File1.Pattern = "*.cpp"
 File1.Refresh
 
-Me.Caption = "Arduino & Esp8266 Code Joiner " & App.Major & "." & App.Revision
+Me.Caption = "Arduino & Esp8266 Code Joiner " & App.Major & "." & App.Minor
 
 
 Me.Left = Val(GetSetting(App.Title, "Settings", "x", Me.Left))
@@ -362,7 +362,7 @@ fw = Me.Width - 300
 fh = Me.Height - 1250
 m = 100
 File1.Height = fh - (File1.Top)
-File1.Width = Me.Width / 5
+File1.Width = Me.Width / 3
 Text1.Left = File1.Left + File1.Width + m
 Text1.Width = fw - (File1.Left + File1.Width + m)
 Text1.Height = fh - (Text1.Top)
