@@ -3,7 +3,9 @@ Welcome, Let me discuss the purpose of this program:
 Arduino & Esp8266 / Esp32 Templates Merged to make a full Sketch.INO.
 For Easily choosing MCU functionality without editing a single line.
 The Merger File is choosed .cpp for easy editing on Notepad++ Color Coding.
-Copy the Tags to a New text file and name it "xxxxxxxxxxxx.cpp". 
+
+Copy the Tags to a New text file and name it "xxxxxxxxxxxx.cpp".
+
 Open joiner.exe and Double Click on each file you want to merge. Click Save INO.
 
 Setup and Loop Functions will be added automatically before Saving the Sketch.INO File.
