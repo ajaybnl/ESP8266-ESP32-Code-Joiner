@@ -16,15 +16,6 @@ Copy tags.cpp to something like "MCUNAME_your-snippet-name.cpp"
 
 Add your own code, Save.
 
-<<<<<<< HEAD
-=======
-Arduino & Esp8266 / Esp32 Templates Merged to make a full Sketch.INO.
-For Easily choosing MCU functionality without editing a single line.
-The Merger File is choosed .cpp for easy editing on Notepad++ Color Coding.
-
-Copy the Tags to a New text file and name it "xxxxxxxxxxxx.cpp".
-
->>>>>>> 191af22d0be27f4a5a1d6036b8696af2aac9d697
 Open joiner.exe and Double Click on each file you want to merge. Click Save INO.
 
 Setup and Loop Functions will be added automatically before Saving the Sketch.INO File.
