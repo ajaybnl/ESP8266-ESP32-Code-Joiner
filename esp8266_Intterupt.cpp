@@ -6,7 +6,7 @@ void ICACHE_RAM_ATTR interrupt ();
  #define intteruptdebug true
 
  #define INTPIN 4 //Change PIN
-int count=0;
+int countint=0;
 <#$#s#$#>
 //INTTERUPT
 pinMode(INTPIN, INPUT);
@@ -23,7 +23,7 @@ if(intteruptdebug)Serial.begin(115200);
 <#$#lb#$#>
 if(intteruptdebug){
 Serial.print("Interrupt Count/S : ");
-Serial.println(count);
+Serial.println(countint);
 delay(2000);
 }
 <#$#f#$#>
@@ -32,7 +32,7 @@ void interrupt() {
 	
 //Do stuff here
   
-count++;
+countint++;
   
 }
 

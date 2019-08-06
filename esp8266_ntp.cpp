@@ -9,7 +9,9 @@ NTPSyncEvent_t ntpEvent;
 //NTP
 #define NTP_SYNC_INTERVAL 600 // 10 Mins
 
-bool ntpdebug = false;
+#define ntpdebug true
+
+
 int8_t timeZone = 5;
 int8_t minutesTimeZone = 30;
 bool dosync = false; // True if a time even has been triggered
@@ -40,7 +42,7 @@ bool dosync = false; // True if a time even has been triggered
 
 <#$#f#$#>
 //NTP
-void ntp_sync_response (NTPSyncEvent_t ntpEvent) {
+bool ntp_sync_response (NTPSyncEvent_t ntpEvent) {
   if (ntpEvent) {
     if(ntpdebug) Serial.println("Time Sync error: ");
     if (ntpEvent == noResponse)

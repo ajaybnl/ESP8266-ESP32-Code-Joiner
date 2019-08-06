@@ -10,25 +10,26 @@
 #define AIO_KEY         ""
 #define PROJECT_NAME "esp8266/temp3"
 
+#define mqttdebug true
 <#$#v#$#>
 //MQTT
-WiFiClient client;
-Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
+WiFiClient client2;
+Adafruit_MQTT_Client mqtt(&client2, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
 Adafruit_MQTT_Publish temp1 = Adafruit_MQTT_Publish(&mqtt,PROJECT_NAME );
 
-bool mqttdebug = false;
+
 <#$#s#$#>
 
 <#$#sb#$#>
 //MQTT
-mqttconnect(true);
+mqttconnect();
 <#$#l#$#>
 
 <#$#lb#$#>
 
  //MQTT
  int val=analogRead(A0);
-    if (mqttconnect(false)) {
+    if (mqttconnect()) {
       if (! temp1.publish(val)) {
         if (mqttdebug) Serial.println("MQTT Failed");
       } else {
@@ -39,7 +40,7 @@ mqttconnect(true);
 
 <#$#f#$#>
 //MQTT
-bool mqttconnect(bool se) {
+bool mqttconnect() {
   int8_t ret;
 
   // Stop if already connected.
@@ -54,7 +55,7 @@ bool mqttconnect(bool se) {
     if (mqttdebug) Serial.println(mqtt.connectErrorString(ret));
     if (mqttdebug) Serial.println("Retrying MQTT connection in 5 seconds...");
     mqtt.disconnect();
-    delay(5000);  // wait 5 seconds
+    delay(2000);  // wait 5 seconds
     retries--;
     if (retries == 0) {
       // basically die and wait for WDT to reset me
