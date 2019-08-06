@@ -1,8 +1,8 @@
-Basic Info:
+**Arduino , Esp8266 , Esp32 Templates / Snippets are merged to make a full Sketch.**
 
-Arduino , Esp8266 , Esp32 Templates / Snippets are merged to make a full Sketch.
 
-The purpose of this program:
+
+**The purpose of this program:**
 
 1) For Easily choosing Microcontroller functionality when starting New Project.
 
@@ -10,9 +10,9 @@ The purpose of this program:
 
 3) Adding more functionality to a project without complicate code writing.
 
-How it works:
+**How it works:**
 
-Copy tags.cpp to something like "MCUNAME_your-snippet-name.cpp"
+Copy tags.cpp to something like "MCUNAME_your-snippet-name.cpp".
 
 Add your own code, Save.
 
@@ -20,7 +20,7 @@ Open joiner.exe and Double Click on each file you want to merge. Click Save INO.
 
 Setup and Loop Functions will be added automatically before Saving the Sketch.INO File.
 
-Note: Do not remove the tags after. It will help you to merge more code later.
+**Note:** Do not remove the tags after. It will help you to merge more code later.
 
 If you are merging a "snippetxxx.cpp file" to already merged "Sketch.INO" then you have to remove the "void setup{}" and "void loop{}" tags. 
 
@@ -28,7 +28,7 @@ They will be automatically added before saving.
 
 
 
-Suggestion: For ESP8266 & ESP32, You should Merge Wifi Routines First.
+**Suggestion:** For ESP8266 & ESP32, You should Merge Wifi Routines First.
 
 The Merger File is choosed .cpp for easy editing on Notepad++ Color Coding.
 
