@@ -7,7 +7,7 @@ RCSwitch mySwitch = RCSwitch();
 //RF
 
   
-  #define rfdebug true
+#define rfdebug true
 <#$#s#$#>
 <#$#sb#$#>
 //RF

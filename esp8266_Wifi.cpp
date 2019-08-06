@@ -1,23 +1,27 @@
 #include <ESP8266WiFi.h>
 <#$#i#$#>
 //WIFI
-char* ssid = "ssid";
-char* password = "pass";
+char* ssid = "FILL_SSID_HERE";
+char* password = "FILL_PASSWORD_HERE";
 unsigned long wifitimer = 0;
 <#$#v#$#>
 //WIFI
-bool wifidebug = true;
+#define wifidebug true
 <#$#s#$#>
 //Serial Begin
 Serial.begin(115200);
 
 //Connect to Wifi
 connectwifi();
+
+
 <#$#sb#$#>
 //WIFI
  wifitimer = millis();
 <#$#l#$#>
 <#$#lb#$#>
+
+
 //WIFI
 //60 SEC TIMER
   if (((millis() - wifitimer) / 1000) > 60) {
@@ -26,6 +30,8 @@ connectwifi();
     }
     wifitimer = millis();
   }
+
+  
 <#$#f#$#>
 //WIFI
 void connectwifi(){
