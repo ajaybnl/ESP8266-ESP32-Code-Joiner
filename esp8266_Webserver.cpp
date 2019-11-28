@@ -1,10 +1,10 @@
 // WEBSERVER NEEDS WIFI ADDED
-<#$#i#$#>
+//i-
 //WEBSERVER
 WiFiServer server(80);
-<#$#v#$#>
-<#$#s#$#>
-<#$#sb#$#>
+//v-
+//s-
+//sb-
 //WEBSERVER
 server.begin();
   if(wifidebug)Serial.println(F("Server started"));
@@ -12,10 +12,10 @@ server.begin();
   // Print the IP address
   if(wifidebug)Serial.println(WiFi.localIP());
 
-<#$#l#$#>
+//l-
 
 
-<#$#lb#$#>
+//lb-
 //WEBSERVER
 /*----------------------------------------------------------------------------------------------*/
 WiFiClient client = server.available();
@@ -68,4 +68,4 @@ WiFiClient client = server.available();
   // flush = ensure written data are received by the other side
   if(wifidebug)Serial.println(F("Disconnecting from client"));
 /*----------------------------------------------------------------------------------------------*/
-<#$#f#$#>
+//f-

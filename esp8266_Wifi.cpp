@@ -1,25 +1,40 @@
 #include <ESP8266WiFi.h>
-<#$#i#$#>
+//i-
 //WIFI
 char* ssid = "FILL_SSID_HERE";
 char* password = "FILL_PASSWORD_HERE";
+
+
+#define LED 1
+
 unsigned long wifitimer = 0;
-<#$#v#$#>
+//v-
 //WIFI
 #define wifidebug true
-<#$#s#$#>
+//s-
+pinMode(LED,OUTPUT);
+
+//Led Blink (My Board)
+digitalWrite(LED,HIGH);
+delay(500);
+digitalWrite(LED,LOW);
+delay(500);
+
 //Serial Begin
-Serial.begin(115200);
+if(wifidebug) Serial.begin(115200);
 
 //Connect to Wifi
 connectwifi();
 
 
-<#$#sb#$#>
+//sb-
 //WIFI
  wifitimer = millis();
-<#$#l#$#>
-<#$#lb#$#>
+
+//l-
+
+
+//lb-
 
 
 //WIFI
@@ -32,7 +47,7 @@ connectwifi();
   }
 
   
-<#$#f#$#>
+//f-
 //WIFI
 void connectwifi(){
 	if (wifidebug) Serial.println("Connecting to Wifi...");
@@ -52,6 +67,10 @@ bool connect_wifi(int maxattempts) {
   //TRY
   int trys=0;
 	while(connected==false){
+
+	//Led Blink (My Board)
+	digitalWrite(LED,!digitalRead(LED));
+
 		if(trys>0){
 		if (wifidebug) Serial.print("Try: ");
 		if (wifidebug) Serial.print(trys);
@@ -61,6 +80,9 @@ bool connect_wifi(int maxattempts) {
 		
 	if(trys>maxattempts)break;
 	}
+  
+  //Led (My Board)
+  digitalWrite(LED,LOW);
   
   return (connected);
 }

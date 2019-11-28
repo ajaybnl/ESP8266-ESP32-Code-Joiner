@@ -1,11 +1,11 @@
 #include <TimeLib.h>
 #include <NtpClientLib.h>
 
-<#$#i#$#>
+//i-
 //NTP
 NTPSyncEvent_t ntpEvent; 
 
-<#$#v#$#>
+//v-
 //NTP
 #define NTP_SYNC_INTERVAL 600 // 10 Mins
 
@@ -16,11 +16,11 @@ int8_t timeZone = 5;
 int8_t minutesTimeZone = 30;
 bool dosync = false; // True if a time even has been triggered
 
-<#$#s#$#>
+//s-
 
 
 
-<#$#sb#$#>
+//sb-
 //NTP
   NTP.onNTPSyncEvent ([](NTPSyncEvent_t event) {
     ntpEvent = event;
@@ -29,18 +29,31 @@ bool dosync = false; // True if a time even has been triggered
 
   NTP.begin ("pool.ntp.org", timeZone, false, minutesTimeZone);
   NTP.setInterval (5); //Do not change
-<#$#l#$#>
+//l-
 //NTP
   if (dosync) {
-    
 	if(ntp_sync_response (ntpEvent)) NTP.setInterval (NTP_SYNC_INTERVAL); // If we got time then change sync interval
     dosync = false;
   }
+  
+  
+  // digital clock display of the time
+  Serial.print(hour());
+  printDigits(minute());
+  printDigits(second());
+  Serial.print(" ");
+  Serial.print(day());
+  Serial.print(" ");
+  Serial.print(month());
+  Serial.print(" ");
+  Serial.print(year()); 
+  Serial.println(); 
+  
 
-<#$#lb#$#>
+//lb-
 
 
-<#$#f#$#>
+//f-
 //NTP
 bool ntp_sync_response (NTPSyncEvent_t ntpEvent) {
   if (ntpEvent) {

@@ -1,21 +1,21 @@
 //MQTT
 #include <PubSubClient.h>
 
-<#$#i#$#>
+//i-
 //MQTT
-const char* MQTTSERVER = "192.168.100.100";
+const char* MQTTSERVER = "192.168.100.101";
 const int   MQTTPORT	   =        1883;
 
 WiFiClient espClient;
 
 PubSubClient mqtt(espClient);
-<#$#v#$#>
+//v-
 //MQTT
 
 //ClientID will be auto generated on start
 
 //MCU
-#define FLOW "esp8266"
+#define FLOW "sensors/esp8266"
 
 #define BUTTON1 FLOW "/button1"
 
@@ -32,18 +32,18 @@ long mqtttimer = 0;
 int button1val=0;
 
 
-<#$#s#$#>
+//s-
 
-<#$#sb#$#>
+//sb-
 //MQTT
 mqtt.setServer(MQTTSERVER, MQTTPORT);
 mqtt.setCallback(mqttcallback);
 if(mqttdebug) Serial.println("Started");
 randomSeed(micros());
  
-<#$#l#$#>
+//l-
 
-<#$#lb#$#>
+//lb-
  if (!mqtt.connected()) {
     mqttconnect();
   }
@@ -63,7 +63,7 @@ randomSeed(micros());
  
 
 
-<#$#f#$#>
+//f-
 //MQTT
 
 

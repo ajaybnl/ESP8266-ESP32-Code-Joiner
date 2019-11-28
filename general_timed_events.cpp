@@ -1,7 +1,7 @@
 
-<#$#i#$#>
+//i-
 
-<#$#v#$#>
+//v-
 //TIMEDEVENTS
 
 
@@ -14,11 +14,11 @@ unsigned long timer1min = 0;
 unsigned long timer10min = 0;
 unsigned long timer30min = 0;
 unsigned long timer1hour = 0;
-<#$#s#$#>
+//s-
 
 
 
-<#$#sb#$#>
+//sb-
 //TIMEDEVENTS
 timer100ms = millis();
 timer1sec = millis();
@@ -27,7 +27,7 @@ timer1min = millis();
 timer10min = millis();
 timer30min = millis();
 timer1hour = millis();
-<#$#l#$#>
+//l-
 if(timedevents){
 //--------------------------------
 /*............ 100MS Timer ...........*/
@@ -106,7 +106,7 @@ timer1hour=millis();
 /*............ Timer ...........*/
 }
 
-<#$#lb#$#>
+//lb-
 
 
-<#$#f#$#>
+//f-

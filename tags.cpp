@@ -1,29 +1,29 @@
 //Add Imports Here
 
-<#$#i#$#>
+//i-
 
 //Add Object Variables Here
 
-<#$#v#$#>
+//v-
 
 //Add Local Variables Here
 
-<#$#s#$#>
+//s-
 
 //Add Setup Code (Upper part) Like Serial Setup, Wifi Connection Etc...
 
-<#$#sb#$#>
+//sb-
 
 //Add Setup Code (Bottom part) Like Sensor Setups & Memory Init
 
-<#$#l#$#>
+//l-
 
 //Add Loop Code (Upper part) Like OTA code, Blynk command
 
-<#$#lb#$#>
+//lb-
 
 //Add Loop Code (Bottom part) All Other Code
 
-<#$#f#$#>
+//f-
 
 //Add Functions Routines Here

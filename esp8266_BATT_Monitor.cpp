@@ -1,14 +1,14 @@
-<#$#i#$#>
+//i-
 //BATT
 #define enablebatterycheck true
 
 unsigned long battchecktimer=0;
-<#$#v#$#>
+//v-
 //BATT
-<#$#s#$#>
-<#$#sb#$#>
-<#$#l#$#> 
-<#$#lb#$#>
+//s-
+//sb-
+//l- 
+//lb-
 //BATT
 
 if(enablebatterycheck){
@@ -52,4 +52,4 @@ if(enablebatterycheck){
     }
 	
 }
-<#$#f#$#>
+//f-

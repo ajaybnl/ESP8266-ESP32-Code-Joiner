@@ -1,6 +1,6 @@
 //UDP
 #include <WiFiUdp.h>
-<#$#i#$#>
+//i-
 //UDP
 
 //SET YOUR PC IP ADDRESS (YOU GOT FROM MODEM)
@@ -15,14 +15,14 @@ int udplocalport = 3424; //no use
 
 
 WiFiUDP Udp;
-<#$#v#$#>
-<#$#s#$#>
-<#$#sb#$#>
+//v-
+//s-
+//sb-
  //UDP
  //Print IP
   udpprint(ipToString(WiFi.localIP()));
-<#$#l#$#>
-<#$#lb#$#>
+//l-
+//lb-
 //UDP
 /*
 How to send debug and measurements to UDP based server on Windows/Mac/Linux PC
@@ -54,7 +54,7 @@ udpchart(analogRead(A0));
 
 delay(1000);
 
-<#$#f#$#>
+//f-
 //UDP
 String ipToString(IPAddress ip) {
   String s = "";

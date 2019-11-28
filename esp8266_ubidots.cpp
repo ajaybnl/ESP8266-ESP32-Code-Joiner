@@ -1,16 +1,16 @@
 #include <WiFiClient.h>
-<#$#i#$#>
+//i-
 //UBIDOTS
 WiFiClient client;
 
-<#$#v#$#>
+//v-
 //UBIDOTS
 String var_temperature = "WRITE TOKEN HERE";
 String token = "WRITE TOKEN HERE";
-<#$#s#$#>
-<#$#sb#$#>
-<#$#l#$#>
-<#$#lb#$#>
+//s-
+//sb-
+//l-
+//lb-
 //UBIDOTS
 /***************************
 * UBIDOTS Upload Data
@@ -21,7 +21,7 @@ String token = "WRITE TOKEN HERE";
 *      //Fail
 *    }
 ****************************/
-<#$#f#$#>
+//f-
 //UBIDOTS
 bool ubidotsupload(String idvariable, float value) {
   bool done = false;

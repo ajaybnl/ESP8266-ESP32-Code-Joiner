@@ -1,11 +1,11 @@
 //BLYNK
 #include <BlynkSimpleEsp32.h>
-<#$#i#$#>
+//i-
 //BLYNK
 char auth[] = "AUTH CODE HERE";
 
 
-<#$#v#$#>
+//v-
 //BLYNK
 int vpin0 = 0;
 int vpin1 = 0;
@@ -22,20 +22,20 @@ int vpin10 = 0;
 
 unsigned long timerblynk = 0;
 
-<#$#s#$#>
+//s-
 
 
 
-<#$#sb#$#>
+//sb-
  //BLYNK
   blynkconn();
 
 
 
-<#$#l#$#>
+//l-
   Blynk.run();
 
-<#$#lb#$#>
+//lb-
 //BLYNK
 /*
 Write Blynk:
@@ -54,7 +54,7 @@ timerblynk=millis();
 
 	
 
-<#$#f#$#>
+//f-
 //BLYNK
 
 void blynkconn() {

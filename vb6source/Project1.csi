@@ -1,0 +1,5 @@
+[History]
+1=#P0#=mb	#P1#=Command1_Click	#P2#=Project1/Form1/Command1_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20191031212143	#P7#=0	#P8#=37	.
+2=#P0#=mb	#P1#=File1_DblClick	#P2#=Project1/Form1/File1_DblClick	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20191031212128	#P7#=0	#P8#=19	.
+3=#P0#=mb	#P1#=Command3_Click	#P2#=Project1/Form1/Command3_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20191031212109	#P7#=0	#P8#=6	.
+4=#P0#=mb	#P1#=cmdCommand4_Click	#P2#=Project1/Form1/cmdCommand4_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20191031210819	#P7#=0	#P8#=18	.

@@ -1,13 +1,13 @@
 #include <WiFi.h>
-<#$#i#$#>
+//i-
 //WIFI
 char* ssid = "FILL_SSID_HERE";
 char* password = "FILL_PASSWORD_HERE";
 unsigned long wifitimer = 0;
-<#$#v#$#>
+//v-
 //WIFI
 #define wifidebug true
-<#$#s#$#>
+//s-
 //Serial Begin
 Serial.begin(115200);
 
@@ -15,11 +15,11 @@ Serial.begin(115200);
 connectwifi();
 
 
-<#$#sb#$#>
+//sb-
 //WIFI
  wifitimer = millis();
-<#$#l#$#>
-<#$#lb#$#>
+//l-
+//lb-
 
 
 //WIFI
@@ -32,7 +32,7 @@ connectwifi();
   }
 
   
-<#$#f#$#>
+//f-
 //WIFI
 void connectwifi(){
 	if (wifidebug) Serial.println("Connecting to Wifi...");

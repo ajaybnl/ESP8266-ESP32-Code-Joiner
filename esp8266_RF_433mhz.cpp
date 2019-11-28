@@ -1,19 +1,19 @@
 #include <RCSwitch.h>
 
-<#$#i#$#>
+//i-
 //RF
 RCSwitch mySwitch = RCSwitch();
-<#$#v#$#>
+//v-
 //RF
 
   
 #define rfdebug true
-<#$#s#$#>
-<#$#sb#$#>
+//s-
+//sb-
 //RF
 
  mySwitch.enableReceive(digitalPinToInterrupt(4)); //GPIO 4 on ESP8266 (not for esp32)
-<#$#l#$#>
+//l-
 //RF
  
  //Read RF Code
@@ -61,10 +61,16 @@ Your Indoor Temp Sensor :
 RF Sent: 325 , ESP8266 Read: App=3 , Data= 25 Degree Celcius	
 RF Sent: 445 , ESP8266 Read: App=4 , Data= 45 % Humidity
 
+NOTE: 
+
+Min , Max Data Values:0, 99
+
+Min,  Max APP Number :0, 167772
+
  */
  
-<#$#lb#$#>
-<#$#f#$#>
+//lb-
+//f-
 //RF
 bool rfdatain(int values[]) {
 bool datain=false;
@@ -78,7 +84,7 @@ bool datain=false;
     if (val > 0) {
       for (int i = 0; i < 10000; i = i + 100) {
         app++;
-        if (match(val, i, i + 100)) {
+       if (match(val, i, i + 99)) {
           values[0] = app;
           values[1] = val - (app*100);
       datain=true;

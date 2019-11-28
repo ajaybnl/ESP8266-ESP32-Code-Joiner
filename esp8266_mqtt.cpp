@@ -2,7 +2,7 @@
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
 
-<#$#i#$#>
+//i-
 //MQTT
 #define AIO_SERVER      "192.168.100.100"
 #define AIO_SERVERPORT  1883    // use 8883 for SSL
@@ -28,7 +28,7 @@
 
 
 #define mqttdebug true
-<#$#v#$#>
+//v-
 //MQTT
 WiFiClient client2;
 Adafruit_MQTT_Client mqtt(&client2, AIO_SERVER, AIO_SERVERPORT,CLIENTID, AIO_USERNAME, AIO_KEY);
@@ -47,17 +47,17 @@ Adafruit_MQTT_Publish button1init = Adafruit_MQTT_Publish(&mqtt,BUTTON1INIT );
 
 
 
-<#$#s#$#>
+//s-
 
-<#$#sb#$#>
+//sb-
 //MQTT
 
 //Subscribe BEFORE connecting
 mqtt.subscribe(&button1);
  
-<#$#l#$#>
+//l-
 
-<#$#lb#$#>
+//lb-
 
 if(mqttconnect()){
 //Connected	
@@ -84,7 +84,7 @@ Adafruit_MQTT_Subscribe *subscription;
     }
 
 
-<#$#f#$#>
+//f-
 //MQTT
 bool mqttconnect() {
   int8_t ret;

@@ -1,14 +1,14 @@
 #include"FS.h"
-<#$#i#$#>
-<#$#v#$#>
+//i-
+//v-
 //SPIFFS
 bool spiffsdebug = false;
-<#$#s#$#>
-<#$#sb#$#>
+//s-
+//sb-
 //SPIFFS
 initspiff();
-<#$#l#$#>
-<#$#lb#$#>
+//l-
+//lb-
 //SPIFFS Functions:
 /*
 String readdir(path) Returns Files in Dir
@@ -19,7 +19,7 @@ appendfile (char* filename,String data)
 removefile (char* filename,String data)
 */
 
-<#$#f#$#>
+//f-
 //SPIFFS
 void initspiff() {
   bool ok = SPIFFS.begin();
