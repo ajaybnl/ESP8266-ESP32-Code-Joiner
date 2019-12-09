@@ -4,15 +4,15 @@
 
 //i-
 //MQTT
-#define AIO_SERVER      "192.168.100.100"
-#define AIO_SERVERPORT  1883    // use 8883 for SSL
-#define AIO_USERNAME    ""
-#define AIO_KEY         ""
+#define MQTT_SERVER      "192.168.100.100"
+#define MQTT_SERVERPORT  1883    // use 8883 for SSL
+#define MQTT_USERNAME    ""
+#define MQTT_KEY         ""
 
 //Unique ID for each device
-#define CLIENTID "myclient9"
+#define CLIENTID "myclient1"
 
-#define FLOW "esp8266"
+#define FLOW "flow/esp8266"
 
 #define BUTTON1 FLOW "/button1"
 
@@ -31,7 +31,7 @@
 //v-
 //MQTT
 WiFiClient client2;
-Adafruit_MQTT_Client mqtt(&client2, AIO_SERVER, AIO_SERVERPORT,CLIENTID, AIO_USERNAME, AIO_KEY);
+Adafruit_MQTT_Client mqtt(&client2, MQTT_SERVER, MQTT_SERVERPORT,CLIENTID, MQTT_USERNAME, MQTT_KEY);
 
 //INPUT ONLY BUTTON1
 Adafruit_MQTT_Subscribe button1 = Adafruit_MQTT_Subscribe(&mqtt,BUTTON1);
@@ -67,7 +67,7 @@ if(mqttconnect()){
 Adafruit_MQTT_Subscribe *subscription;
   while ((subscription = mqtt.readSubscription(5000))) {
     if (subscription == &button1) {
-     int val=button1.lastread;
+     int val=(int)button1.lastread;
 	 
     }
   }
@@ -76,7 +76,7 @@ Adafruit_MQTT_Subscribe *subscription;
  //MQTT
  int val=analogRead(A0);
     if (mqttconnect()) {
-      if (! temp1.publish(val)) {
+      if (! sensor1.publish(val)) {
         if (mqttdebug) Serial.println("MQTT Failed");
       } else {
         if (mqttdebug) Serial.println("MQTT OK!");

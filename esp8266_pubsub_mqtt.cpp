@@ -52,7 +52,13 @@ randomSeed(micros());
 
   
   if(((millis()-mqtttimer)/1000)>3){
-	
+
+  int val=0;
+  
+  //Read Analog Input
+  val=analogRead(0);
+  
+  //Send Value to Mqtt
 	char msg[10];    
     snprintf(msg, 10, "%2d", val);  
 	 mqtt.publish(SENSOR1, msg);    

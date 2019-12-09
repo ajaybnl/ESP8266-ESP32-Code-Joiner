@@ -161,6 +161,7 @@ bool udp_write(char* text, int port) {
     if (Udp.beginPacket(udpip, port)) {
       Udp.write(text);
       Udp.endPacket();
+	  delay(100);
       return (true);
     } else {
       Udp.stop();
